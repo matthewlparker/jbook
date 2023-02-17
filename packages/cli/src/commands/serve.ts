@@ -1,8 +1,11 @@
 import { Command } from 'commander';
 
 export const serveCommand = new Command()
-  .command('serve')
+  // square brackets indicate optional value
+  .command('serve [filename]')
   .description('Open a file for editing')
-  .action(() => {
-    console.log('Getting ready to serve a file');
+  // angled brackets indicate required value
+  .option('-p, --port <number>', 'port to run server on', '4005')
+  .action((filename = 'notebook.js', options) => {
+    console.log(filename, options);
   });
