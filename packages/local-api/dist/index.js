@@ -8,8 +8,9 @@ const express_1 = __importDefault(require("express"));
 const serve = (port, filename, dir) => {
     // Initial setup for express server
     const app = (0, express_1.default)();
-    app.listen(port, () => {
-        console.log('Listening on port ', port);
+    // Asyncify server startup
+    return new Promise((resolve, reject) => {
+        app.listen(port, resolve).on('error', reject);
     });
 };
 exports.serve = serve;
