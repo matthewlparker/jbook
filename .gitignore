@@ -1,2 +1,3 @@
 node_modules
-packages/local-client
+dist/
+local-client/
