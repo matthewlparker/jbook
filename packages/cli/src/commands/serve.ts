@@ -1,4 +1,5 @@
 import { Command } from 'commander';
+import { serve } from 'local-api';
 
 export const serveCommand = new Command()
   // square brackets indicate optional value
@@ -6,6 +7,6 @@ export const serveCommand = new Command()
   .description('Open a file for editing')
   // angled brackets indicate required value
   .option('-p, --port <number>', 'port to run server on', '4005')
-  .action((filename = 'notebook.js', options) => {
-    console.log(filename, options);
+  .action((filename = 'notebook.js', options: { port: string }) => {
+    serve(parseInt(options.port), filename, '/');
   });
