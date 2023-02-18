@@ -9,15 +9,19 @@ export const useCumulativeCode = (cellId: string) => {
       import _ReactDOM from 'react-dom';
       var show = (value) => {
         const root = document.querySelector('#root');
+        let div = document.createElement('div');
 
         if (typeof value === 'object') {
           if (value.$$typeof && value.props) {
             _ReactDOM.render(value, root);
           } else {
-            root.innerHTML = JSON.stringify(value);
+            div = document.createElement('div');
+            div.innerHTML = JSON.stringify(value);
+            root.appendChild(div);
           }
         } else {
-          root.innerHTML = value;
+          div.innerHTML = value;
+          root.appendChild(div);
         }
       };
     `;
