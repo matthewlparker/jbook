@@ -2,15 +2,23 @@
   "name": "jswb",
   "version": "1.0.0",
   "description": "",
+  "bin": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "start": "tsc --watch --preserveWatchOutput"
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "commander": "^10.0.0",
-    "local-api": "^1.0.0"
+    "@jswb/local-api": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

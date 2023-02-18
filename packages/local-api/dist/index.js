@@ -26,7 +26,7 @@ const serve = (port, filename, dir, useProxy) => {
     else {
         // ...on production
         // Apply node's path resolution algorithm to find file location
-        const packagePath = require.resolve('local-client/build/index.html');
+        const packagePath = require.resolve('@jswb/local-client/build/index.html');
         // Path to the build directory that excludes file name
         app.use(express_1.default.static(path_1.default.dirname(packagePath)));
     }

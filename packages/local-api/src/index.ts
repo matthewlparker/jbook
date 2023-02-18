@@ -29,7 +29,7 @@ export const serve = (
   } else {
     // ...on production
     // Apply node's path resolution algorithm to find file location
-    const packagePath = require.resolve('local-client/build/index.html');
+    const packagePath = require.resolve('@jswb/local-client/build/index.html');
     // Path to the build directory that excludes file name
     app.use(express.static(path.dirname(packagePath)));
   }
