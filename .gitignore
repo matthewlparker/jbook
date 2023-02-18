@@ -1,2 +1,4 @@
 node_modules
-local-client/
+build
+dist
+local-client
