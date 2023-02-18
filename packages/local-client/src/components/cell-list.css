@@ -2,6 +2,11 @@
   margin: 0 25px 10vh;
 }
 
+/* Keep for reference to style last add-button element*/
+/* .cell-list > div:last-of-type {
+  padding-bottom: 100%;
+} */
+
 .react-draggable-transparent-selection .cell-list {
   margin-bottom: 100vh;
 }
