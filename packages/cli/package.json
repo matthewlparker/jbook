@@ -1,6 +1,6 @@
 {
   "name": "jswb",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "",
   "bin": "dist/index.js",
   "files": [
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jswb/local-client": "^1.1.0"
+    "@jswb/local-client": "^1.0.0"
   },
   "devDependencies": {
-    "@jswb/local-api": "^1.1.0",
+    "@jswb/local-api": "^1.0.0",
     "@types/node": "^18.13.0",
     "commander": "^10.0.0",
     "esbuild": "0.8.26",
