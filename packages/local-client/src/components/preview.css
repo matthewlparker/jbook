@@ -1,0 +1,38 @@
+.preview-wrapper {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.preview-wrapper iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.preview-error {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  color: red;
+  font-family: 'Times New Roman';
+}
+
+.preview-error h4 {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* psuedo element after preview-wrapper class element */
+.react-draggable-transparent-selection .preview-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
